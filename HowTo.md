@@ -71,6 +71,7 @@ Git / GitHub How
 	$ git rm <nombre_archivo>
 
 ¿Cómo renombrar archivos?
+=========================
 
 <!-- language: lang-bash -->
 
