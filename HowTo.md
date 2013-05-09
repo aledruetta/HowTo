@@ -35,7 +35,7 @@ Git / GitHub How
 
 <!-- language: lang-bash -->
 
-	ssh-keygen -t rsa -C "tu_email@ejemplo.com"
+	$ ssh-keygen -t rsa -C "tu_email@ejemplo.com"
 
 ¿Cómo ver el estado en que se encuentra el repositorio?
 =======================================================
