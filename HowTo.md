@@ -24,6 +24,22 @@ Git / GitHub How
 	$ git config --global user.name “Nombre Apellido”
 	$ git config --global user.email “nombre@servidor.com”
 
+¿Cómo clonar un repositorio de GitHub?
+======================================
+
+<!-- language: lang-bash -->
+
+	$ git clone <path/a/GitHub> <nombre_carpeta>
+
+- Ejemplo:
+
+<!-- language: lang-bash -->
+
+	$ git clone git://github.com/usuario/myCarpeta.git myCarpeta
+	$ cd myCarpeta
+	$ ls -a
+	$ ls .git
+
 ¿Cómo ver el estado en que se encuentra el repositorio?
 =======================================================
 
@@ -34,20 +50,44 @@ Git / GitHub How
 ¿Cómo Indicar a Git que debe dar seguimiento a archivos?
 ========================================================
 
+- Todos los archivos:
+
 <!-- language: lang-bash -->
 
-	$ git add .					# Todos los archivos.
-	$ git add <nombre_archivo>			# Archivos específicos.
-	$ git add *.py					# Tipos de archivos.
+	$ git add .
+
+- Archivos específicos:
+
+<!-- language: lang-bash -->
+
+	$ git add <nombre_archivo>
+
+- Tipos de archivos:
+
+<!-- language: lang-bash -->
+
+	$ git add *.py
 
 ¿Cómo Preparar Archivos (Stage)?
 ================================
 
+- Todos los archivos:
+
 <!-- language: lang-bash -->
 
-	$ git add .					# Todos los archivos.
-	$ git add <nombre_archivo>			# Archivos específicos.
-	$ git add *.py					# Tipos de archivos.
+	$ git add .
+
+- Archivos específicos:
+
+<!-- language: lang-bash -->
+
+	$ git add <nombre_archivo>
+
+- Tipos de archivos:
+
+<!-- language: lang-bash -->
+
+	$ git add *.py
 
 ¿Cómo Confirmar Archivos (Commit)?
 ==================================
@@ -62,6 +102,27 @@ Git / GitHub How
 <!-- language: lang-bash -->
 
 	$ git log
+
+¿Cómo ver los cambios realizados a los archivos?
+================================================
+
+- Para ver los cambios realizados pero no preparados (unstaged).
+
+<!-- language: lang-bash -->
+
+	$ git diff
+
+- Para ver los cambios preparados (staged).
+
+<!-- language: lang-bash -->
+
+	$ git diff --cached
+
+- Para ver todos los cambios (staged and unstaged).
+
+<!-- language: lang-bash -->
+
+	$ git diff HEAD
 
 ¿Cómo eliminar archivos?
 ========================
