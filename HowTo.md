@@ -58,12 +58,21 @@ Git / GitHub How To
 ¿Cómo ver el estado en que se encuentra el repositorio?
 -------------------------------------------------------
 
+> El flujo de trabajo es el siguiente: 
+> Agregar (Track), Modificar, Preparar (Stage), Confirmar (Commit).
+
 <!-- language: lang-bash -->
 
 	$ git status
 
+> La instrucción status le indicará si ha habido cambios en el Directorio 
+> de Trabajo; si hay archivos sin seguimiento (untracked) o si hay cambios
+> preparados (staged) para un commit.
+
 ¿Cómo Indicar a Git que debe dar seguimiento a archivos?
 --------------------------------------------------------
+
+> Git versionará sólo aquellos archivos que le sean indicados para eso.
 
 - Todos los archivos:
 
@@ -86,6 +95,9 @@ Git / GitHub How To
 ¿Cómo preparar archivos (Stage)?
 --------------------------------
 
+> Sólo los archivos preparados (staged) serán adicionados a la próxima 
+> confirmación (commit).
+
 - Todos los archivos:
 
 <!-- language: lang-bash -->
@@ -107,18 +119,32 @@ Git / GitHub How To
 ¿Cómo quitar archivos preparados (staged) erróneamente?
 -------------------------------------------------------
 
+> Puede que haya adicionado archivos al Stage que no quería preparar. 
+
 <!-- language: lang-bash -->
 
 	$ git reset HEAD
 
-- Quitar sólo de Stage sólo uno o algunos archivos:
+- Quitar de Stage sólo uno o algunos archivos:
 
 <!-- language: lang-bash -->
 
 	$ git reset HEAD -- <archivo>
 
+¿Cómo deshacer cambios en el Directorio de Trabajo (unestaged)?
+---------------------------------------------------------------
+
+> Si todavía no preparó los cambios, puede deshacerlos y dejar el Directorio
+> de trabajo como en el último commit.
+
+<!-- language: lang-bash -->
+
+	$ git checkout -- <archivo>
+
 ¿Cómo confirmar archivos (Commit)?
 ----------------------------------
+
+> Cuando esté listo, guarde una instantanea de su trabajo.
 
 <!-- language: lang-bash -->
 
@@ -142,11 +168,16 @@ Git / GitHub How To
 
 - Para ver los cambios realizados que todavía no hemos preparado (unstaged).
 
+> A veces necesitamos saber qué ha cambiado desde el último add que realizamos.
+
 <!-- language: lang-bash -->
 
 	$ git diff
 
 - Para ver los cambios que ya hemos preparado (staged).
+
+> Antes de hacer un commit puede ser útil saber qué cambios estaremos
+> confirmando.
 
 <!-- language: lang-bash -->
 
@@ -171,6 +202,8 @@ Ejemplo:
 
 ¿Cómo deshacer el último Commit y volver al último Stage?
 ---------------------------------------------------------
+
+> Si olvidamos agregar archivos o hacer algún cambio antes de confirmar:
 
 <!-- language: lang-bash -->
 
