@@ -35,21 +35,39 @@ Git / GitHub How
 ¿Cómo Preparar Archivos (Stage)?
 ================================
 
+<!-- language: lang-py -->
+
+	$ git add .				# Todos los archivos.
+	$ git add <nombre_archivo>		# Archivos específicos.
 
 ¿Cómo Confirmar Archivos (Commit)?
 ==================================
 
+<!-- language: lang-py -->
+
+	$ git commit -m "mensaje de confirmación"
 
 ¿Cómo Crear Una Rama (Branch)?
 ==============================
 
+<!-- language: lang-py -->
+
+	$ git branch <nombre_rama>
 
 ¿Cómo Moverse a Otra Rama (Branch)?
 ===================================
 
+<!-- language: lang-py -->
+
+	$ git checkout <nombre_rama>
 
 ¿Cómo Mezclar Ramas (Merge)?
 ============================
+
+<!-- language: lang-py -->
+
+	$ git checkout master
+	$ git merge <nombre_rama>
 
 
 
