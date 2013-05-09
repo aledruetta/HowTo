@@ -6,20 +6,20 @@ Git / GitHub How
 
 - Crear una carpeta local:
 
-<!-- language: lang-py -->
+<!-- language: lang-bash -->
 	
 	$ mkdir <nombre_carpeta>
 	$ cd <nombre_carpeta>
 
 - Inicializar el repositorio:
 
-<!-- language: lang-py -->
+<!-- language: lang-bash -->
 	
 	$ git init
 
 - Configuración:
 
-<!-- language: lang-py -->
+<!-- language: lang-bash -->
 
 	$ git config --global user.name “Nombre Apellido”
 	$ git config --global user.email “nombre@servidor.com”
@@ -27,44 +27,46 @@ Git / GitHub How
 ¿Cómo Indicar a Git que debe dar seguimiento a archivos?
 ========================================================
 
-<!-- language: lang-py -->
+<!-- language: lang-bash -->
 
-	$ git add .				# Todos los archivos.
-	$ git add <nombre_archivo>		# Archivos específicos.
+	$ git add .					# Todos los archivos.
+	$ git add <nombre_archivo>			# Archivos específicos.
+	$ git add *.py					# Tipos de archivos.
 
 ¿Cómo Preparar Archivos (Stage)?
 ================================
 
-<!-- language: lang-py -->
+<!-- language: lang-bash -->
 
-	$ git add .				# Todos los archivos.
-	$ git add <nombre_archivo>		# Archivos específicos.
+	$ git add .					# Todos los archivos.
+	$ git add <nombre_archivo>			# Archivos específicos.
+	$ git add *.py					# Tipos de archivos.
 
 ¿Cómo Confirmar Archivos (Commit)?
 ==================================
 
-<!-- language: lang-py -->
+<!-- language: lang-bash -->
 
 	$ git commit -m "mensaje de confirmación"
 
 ¿Cómo Crear Una Rama (Branch)?
 ==============================
 
-<!-- language: lang-py -->
+<!-- language: lang-bash -->
 
 	$ git branch <nombre_rama>
 
 ¿Cómo Moverse a Otra Rama (Branch)?
 ===================================
 
-<!-- language: lang-py -->
+<!-- language: lang-bash -->
 
 	$ git checkout <nombre_rama>
 
 ¿Cómo Mezclar Ramas (Merge)?
 ============================
 
-<!-- language: lang-py -->
+<!-- language: lang-bash -->
 
 	$ git checkout master
 	$ git merge <nombre_rama>
