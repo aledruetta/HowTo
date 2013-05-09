@@ -23,8 +23,10 @@ Git / GitHub How
 
 	$ git config --global user.name “Nombre Apellido”
 	$ git config --global user.email “nombre@servidor.com”
+
 ¿Cómo generar llaves SSH?
-=================================
+-------------------------
+
 - Comprobar si existe alguna llave en el pc:
 
 <!-- language: lang-bash -->
