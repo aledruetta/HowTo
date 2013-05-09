@@ -1,15 +1,15 @@
-Git / GitHub How
-================
+Git / GitHub How To
+===================
 
-¿Cómo Crear un Repositorio Local?
+¿Cómo crear un repositorio local?
 ---------------------------------
 
 - Crear una carpeta local:
 
 <!-- language: lang-bash -->
 	
-	$ mkdir <nombre_carpeta>
-	$ cd <nombre_carpeta>
+	$ mkdir <directorio>
+	$ cd <directorio>
 
 - Inicializar el repositorio:
 
@@ -44,7 +44,7 @@ Git / GitHub How
 
 <!-- language: lang-bash -->
 
-	$ git clone <path/a/GitHub> <nombre_carpeta>
+	$ git clone [url]
 
 - Ejemplo:
 
@@ -83,7 +83,7 @@ Git / GitHub How
 
 	$ git add *.py
 
-¿Cómo Preparar Archivos (Stage)?
+¿Cómo preparar archivos (Stage)?
 --------------------------------
 
 - Todos los archivos:
@@ -96,7 +96,7 @@ Git / GitHub How
 
 <!-- language: lang-bash -->
 
-	$ git add <nombre_archivo>
+	$ git add <archivo1> <archivo2>
 
 - Tipos de archivos:
 
@@ -104,12 +104,31 @@ Git / GitHub How
 
 	$ git add *.py
 
-¿Cómo Confirmar Archivos (Commit)?
+¿Cómo quitar archivos preparados (staged) erróneamente?
+-------------------------------------------------------
+
+<!-- language: lang-bash -->
+
+	$ git reset HEAD
+
+- Quitar sólo de Stage sólo uno o algunos archivos:
+
+<!-- language: lang-bash -->
+
+	$ git reset HEAD -- <archivo>
+
+¿Cómo confirmar archivos (Commit)?
 ----------------------------------
 
 <!-- language: lang-bash -->
 
 	$ git commit -m "mensaje de confirmación"
+
+- Para preparar (staged) y confirmar de una vez:
+
+<!-- language: lang-bash -->
+
+	$ git commit -a -m "mensaje de confirmación"
 
 ¿Cómo ver el historial de commits?
 ----------------------------------
@@ -118,16 +137,16 @@ Git / GitHub How
 
 	$ git log
 
-¿Cómo ver los cambios realizados a los archivos?
+¿Cómo ver los cambios desde el último Commit?
 ------------------------------------------------
 
-- Para ver los cambios realizados pero no preparados (unstaged).
+- Para ver los cambios realizados que todavía no hemos preparado (unstaged).
 
 <!-- language: lang-bash -->
 
 	$ git diff
 
-- Para ver los cambios preparados (staged).
+- Para ver los cambios que ya hemos preparado (staged).
 
 <!-- language: lang-bash -->
 
@@ -139,35 +158,53 @@ Git / GitHub How
 
 	$ git diff HEAD
 
+- Para ver un resumen de los cambios realizados agregar la opción --stat a las
+instrucciones anteriores.
+
+Ejemplo:
+
+<!-- language: lang-bash -->
+
+	$ git diff HEAD --stat
+	HowTo.md | 43 ++++++++++++++++++++++++++-----------------
+ 	1 file changed, 26 insertions(+), 17 deletions(-)
+
+¿Cómo deshacer el último Commit y volver al último Stage?
+---------------------------------------------------------
+
+<!-- language: lang-bash -->
+
+	$ git reset --soft HEAD~
+
 ¿Cómo eliminar archivos?
 ------------------------
 
 <!-- language: lang-bash -->
 
-	$ git rm <nombre_archivo>
+	$ git rm <archivo>
 
 ¿Cómo renombrar archivos?
 -------------------------
 
 <!-- language: lang-bash -->
 
-	$ git mv <nombre_archivo>
+	$ git mv <archivo>
 
-¿Cómo Crear Una Rama (Branch)?
+¿Cómo crear una rama (Branch)?
 ------------------------------
 
 <!-- language: lang-bash -->
 
 	$ git branch <nombre_rama>
 
-¿Cómo Moverse a Otra Rama (Branch)?
+¿Cómo moverse a otra rama (Branch)?
 -----------------------------------
 
 <!-- language: lang-bash -->
 
 	$ git checkout <nombre_rama>
 
-¿Cómo Mezclar Ramas (Merge)?
+¿Cómo mezclar ramas (Merge)?
 ----------------------------
 
 <!-- language: lang-bash -->
