@@ -163,8 +163,18 @@ Git / GitHub How To
 
 	$ git log
 
+- Un log con información resumida:
+
+<!-- language: lang-bash -->
+
+	$ git log --oneline
+
 ¿Cómo ver los cambios desde el último Commit?
 ------------------------------------------------
+
+<!-- language: lang-bash -->
+
+	$ git diff HEAD
 
 - Para ver los cambios realizados que todavía no hemos preparado (unstaged).
 
@@ -182,12 +192,6 @@ Git / GitHub How To
 <!-- language: lang-bash -->
 
 	$ git diff --cached
-
-- Para ver todos los cambios (staged and unstaged).
-
-<!-- language: lang-bash -->
-
-	$ git diff HEAD
 
 - Para ver un resumen de los cambios realizados agregar la opción --stat a las
 instrucciones anteriores.
