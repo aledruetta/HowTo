@@ -169,12 +169,29 @@ Git / GitHub How To
 
 	$ git log --oneline
 
-¿Cómo ver los cambios desde el último Commit?
+¿Cómo ver los cambios que se han realizado?
 ------------------------------------------------
+
+- Para ver los cambios realizados desde que preparamos (add) y confirmamos (commit) por última vez:
 
 <!-- language: lang-bash -->
 
 	$ git diff HEAD
+
+- Para ver los cambios realizados desde un commit en particular:
+
+> El orden hacia atrás es: HEAD, HEAD~1, HEAD~2 ...
+> HEAD~n puede reemplazarse también por el identificador SHA1 del commit.
+
+<!-- language: lang-bash -->
+
+	$ git diff HEAD~3
+
+- Para ver los cambios entre dos commits:
+
+<!-- language: lang-bash -->
+
+	$ git diff HEAD~3 HEAD~1
 
 - Para ver los cambios realizados que todavía no hemos preparado (unstaged).
 
