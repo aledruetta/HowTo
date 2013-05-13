@@ -176,25 +176,25 @@ Git / GitHub How To
 
 	$ git diff HEAD
 
-- Para ver los cambios realizados que todavía no hemos preparado (unstaged).
-
 > A veces necesitamos saber qué ha cambiado desde el último add que realizamos.
+
+- Para ver los cambios realizados que todavía no hemos preparado (unstaged):
 
 <!-- language: lang-bash -->
 
 	$ git diff
 
-- Para ver los cambios que ya hemos preparado (staged).
-
 > Antes de hacer un commit puede ser útil saber qué cambios estaremos
 > confirmando.
+
+- Para ver los cambios que ya hemos preparado (staged):
 
 <!-- language: lang-bash -->
 
 	$ git diff --cached
 
 - Para ver un resumen de los cambios realizados agregar la opción --stat a las
-instrucciones anteriores.
+instrucciones anteriores:
 
 Ejemplo:
 
@@ -225,7 +225,7 @@ Ejemplo:
 
 <!-- language: lang-bash -->
 
-	$ git mv <archivo>
+	$ git mv <archivo> <archivo_destino>
 
 ¿Cómo crear una rama (Branch)?
 ------------------------------
