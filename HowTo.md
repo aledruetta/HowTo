@@ -232,10 +232,8 @@ Ejemplo:
 
 	$ git reset --soft HEAD~
 
-¿Cómo volver a un commit en particular y hacer que este sea el último, borrando
--------------------------------------------------------------------------------
-todos los que le siguen?
-------------------------
+¿Cómo volver a un commit en particular y hacer que este sea el último, borrando todos los que le siguen?
+--------------------------------------------------------------------------------------------------------
 
 <!-- language: lang-bash -->
 
