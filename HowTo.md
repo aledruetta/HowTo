@@ -7,14 +7,14 @@ Git / GitHub How To
 - Crear una carpeta local:
 
 <!-- language: lang-bash -->
-	
+
 	$ mkdir <directorio>
 	$ cd <directorio>
 
 - Inicializar el repositorio:
 
 <!-- language: lang-bash -->
-	
+
 	$ git init
 
 - Configuración:
@@ -55,17 +55,32 @@ Git / GitHub How To
 	$ ls -a
 	$ ls .git
 
+¿Cómo actualizar el repositorio local cuando su origen es un fork?
+------------------------------------------------------------------
+
+- Configurar el upstream (sólo una vez)
+
+<!-- language: lang-bash -->
+
+	$ git remote add upstream git@github.com:GrupoEstudioC/EjerciciosLibroC.git
+
+- Para actualizar los cambios que se hayan producido en upstream.
+
+<!-- language: lang-bash -->
+
+	$ git pull --rebase upstream master
+
 ¿Cómo ver el estado en que se encuentra el repositorio?
 -------------------------------------------------------
 
-> El flujo de trabajo es el siguiente: 
+> El flujo de trabajo es el siguiente:
 > Agregar (Track), Modificar, Preparar (Stage), Confirmar (Commit).
 
 <!-- language: lang-bash -->
 
 	$ git status
 
-> La instrucción status le indicará si ha habido cambios en el Directorio 
+> La instrucción status le indicará si ha habido cambios en el Directorio
 > de Trabajo; si hay archivos sin seguimiento (untracked) o si hay cambios
 > preparados (staged) para un commit.
 
@@ -95,7 +110,7 @@ Git / GitHub How To
 ¿Cómo preparar archivos (Stage)?
 --------------------------------
 
-> Sólo los archivos preparados (staged) serán adicionados a la próxima 
+> Sólo los archivos preparados (staged) serán adicionados a la próxima
 > confirmación (commit).
 
 - Todos los archivos:
@@ -119,7 +134,7 @@ Git / GitHub How To
 ¿Cómo quitar archivos preparados (staged) erróneamente?
 -------------------------------------------------------
 
-> Puede que haya adicionado archivos al Stage que no quería preparar. 
+> Puede que haya adicionado archivos al Stage que no quería preparar.
 
 <!-- language: lang-bash -->
 
