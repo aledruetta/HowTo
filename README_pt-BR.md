@@ -78,6 +78,8 @@ How To Git / GitHub
 > o fluxo de trabalho é o seguinte:
 > Seguir (Track), Modificar (Edit), Preparar (Stage), Confirmar (Commit).
 
+![Workflow](workflow.png)
+
 <!-- language: lang-bash -->
 
 	$ git status
