@@ -78,6 +78,8 @@ Git / GitHub How To
 > El flujo de trabajo es el siguiente:
 > Agregar (Track), Modificar (Edit), Preparar (Stage), Confirmar (Commit).
 
+![Workflow](workflow.png)
+
 <!-- language: lang-bash -->
 
 	$ git status
