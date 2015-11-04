@@ -63,7 +63,7 @@ How To Git / GitHub
 <!-- language: lang-bash -->
 
     $ git remote add upstream git@github.com:user/repo.git
-        $ git remote -v
+    $ git remote -v
 
 - Atualizar as mudanças que tiverem sido feitas no upstream.
 
