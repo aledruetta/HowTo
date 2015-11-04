@@ -50,8 +50,8 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git clone git://github.com/user/repo.git folder
-	$ cd folder
+	$ git clone git://github.com/user/repo.git <directory>
+	$ cd <directory>
 	$ ls -a
 	$ ls .git
 
@@ -70,7 +70,7 @@ How To Git / GitHub
 <!-- language: lang-bash -->
 
         $ git fetch upstream
-	$ git rebase upstream/master
+        $ git rebase upstream/master
 
 ¿Como visualizar o estado atual do repositório?
 -----------------------------------------------
@@ -104,7 +104,7 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git add <archivo1> <archivo2>
+	$ git add <file1> <file2>
 
 - Tipos de arquivos:
 

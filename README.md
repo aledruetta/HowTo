@@ -1,4 +1,4 @@
-Git / GitHub How To
+How To Git / GitHub 
 ===================
 
 ¿Cómo crear un repositorio local?
@@ -50,8 +50,8 @@ Git / GitHub How To
 
 <!-- language: lang-bash -->
 
-	$ git clone git://github.com/user/repo.git folder
-	$ cd folder
+	$ git clone git://github.com/user/repo.git <directory>
+	$ cd <directory>
 	$ ls -a
 	$ ls .git
 
@@ -104,7 +104,7 @@ Git / GitHub How To
 
 <!-- language: lang-bash -->
 
-	$ git add <archivo1> <archivo2>
+	$ git add <file1> <file2>
 
 - Tipos de archivos:
 
