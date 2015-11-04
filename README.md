@@ -8,21 +8,21 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ mkdir <directory>
-	$ cd <directory>
+    $ mkdir <directory>
+    $ cd <directory>
 
 - Inicializar el repositorio:
 
 <!-- language: lang-bash -->
 
-	$ git init
+    $ git init
 
 - Configuración:
 
 <!-- language: lang-bash -->
 
-	$ git config --global user.name “Nombre Apellido”
-	$ git config --global user.email “nombre@servidor.com”
+    $ git config --global user.name “Nombre Apellido”
+    $ git config --global user.email “nombre@servidor.com”
 
 ¿Cómo generar llaves SSH?
 -------------------------
@@ -31,29 +31,29 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ cd ~/.ssh
+    $ cd ~/.ssh
 
 - Generar una nueva llave SSH:
 
 <!-- language: lang-bash -->
 
-	$ ssh-keygen -t rsa -C "tu_email@ejemplo.com"
+    $ ssh-keygen -t rsa -C "tu_email@ejemplo.com"
 
 ¿Cómo clonar un repositorio de GitHub?
 --------------------------------------
 
 <!-- language: lang-bash -->
 
-	$ git clone [url]
+    $ git clone [url]
 
 - Ejemplo:
 
 <!-- language: lang-bash -->
 
-	$ git clone git://github.com/user/repo.git <directory>
-	$ cd <directory>
-	$ ls -a
-	$ ls .git
+    $ git clone git://github.com/user/repo.git <directory>
+    $ cd <directory>
+    $ ls -a
+    $ ls .git
 
 ¿Cómo actualizar el repositorio local cuando su origen es un fork?
 ------------------------------------------------------------------
@@ -62,15 +62,15 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git remote add upstream git@github.com:user/repo.git
-        $ git remote -v
+    $ git remote add upstream git@github.com:user/repo.git
+    $ git remote -v
 
 - Para actualizar los cambios que se hayan producido en upstream.
 
 <!-- language: lang-bash -->
 
-        $ git fetch upstream
-	$ git rebase upstream/master
+    $ git fetch upstream
+    $ git rebase upstream/master
 
 ¿Cómo ver el estado en que se encuentra el repositorio?
 -------------------------------------------------------
@@ -82,7 +82,7 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git status
+    $ git status
 
 > La instrucción status le indicará si ha habido cambios en el Directorio
 > de Trabajo; si hay archivos sin seguimiento (untracked) o si hay cambios
@@ -98,19 +98,19 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git add .
+    $ git add .
 
 - Archivos específicos:
 
 <!-- language: lang-bash -->
 
-	$ git add <file1> <file2>
+    $ git add <file1> <file2>
 
 - Tipos de archivos:
 
 <!-- language: lang-bash -->
 
-	$ git add *.py
+    $ git add *.py
 
 ¿Cómo quitar archivos preparados (staged) erróneamente?
 -------------------------------------------------------
@@ -119,13 +119,13 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git reset HEAD
+    $ git reset HEAD
 
 - Quitar de Stage sólo uno o algunos archivos:
 
 <!-- language: lang-bash -->
 
-	$ git reset HEAD -- <file>
+    $ git reset HEAD -- <file>
 
 ¿Cómo deshacer cambios en el Directorio de Trabajo (unestaged)?
 ---------------------------------------------------------------
@@ -135,7 +135,7 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git checkout -- <file>
+    $ git checkout -- <file>
 
 ¿Cómo confirmar archivos (Commit)?
 ----------------------------------
@@ -144,26 +144,26 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git commit -m "mensaje de confirmación"
+    $ git commit -m "mensaje de confirmación"
 
 - Para preparar (staged) y confirmar de una vez:
 
 <!-- language: lang-bash -->
 
-	$ git commit -a -m "mensaje de confirmación"
+    $ git commit -a -m "mensaje de confirmación"
 
 ¿Cómo ver el historial de commits?
 ----------------------------------
 
 <!-- language: lang-bash -->
 
-	$ git log
+    $ git log
 
 - Un log con información resumida:
 
 <!-- language: lang-bash -->
 
-	$ git log --oneline
+    $ git log --oneline
 
 ¿Cómo ver los cambios que se han realizado?
 -------------------------------------------
@@ -172,7 +172,7 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git diff HEAD
+    $ git diff HEAD
 
 - Para ver los cambios realizados desde un commit en particular:
 
@@ -181,13 +181,13 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git diff HEAD~3
+    $ git diff HEAD~3
 
 - Para ver los cambios entre dos commits:
 
 <!-- language: lang-bash -->
 
-	$ git diff HEAD~3 HEAD~1
+    $ git diff HEAD~3 HEAD~1
 
 - Para ver los cambios realizados que todavía no hemos preparado (unstaged).
 
@@ -197,7 +197,7 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git diff
+    $ git diff
 
 > Antes de hacer un commit puede ser útil saber qué cambios estaremos
 > confirmando.
@@ -206,7 +206,7 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-	$ git diff --cached
+    $ git diff --cached
 
 - Para ver un resumen de los cambios realizados agregar la opción --stat a las
 instrucciones anteriores:
@@ -215,8 +215,8 @@ Ejemplo:
 
 <!-- language: lang-bash -->
 
-	$ git diff HEAD --stat
-	HowTo.md | 43 ++++++++++++++++++++++++++-----------------
+    $ git diff HEAD --stat
+    HowTo.md | 43 ++++++++++++++++++++++++++-----------------
  	1 file changed, 26 insertions(+), 17 deletions(-)
 
 ¿Cómo deshacer el último Commit y volver al último Stage?
@@ -226,48 +226,48 @@ Ejemplo:
 
 <!-- language: lang-bash -->
 
-	$ git reset --soft HEAD~
+    $ git reset --soft HEAD~
 
 ¿Cómo volver a un commit en particular y hacer que este sea el último, borrando todos los que le siguen?
 --------------------------------------------------------------------------------------------------------
 
 <!-- language: lang-bash -->
 
-	$ git reset --hard SHA1
+    $ git reset --hard SHA1
 
 ¿Cómo eliminar archivos?
 ------------------------
 
 <!-- language: lang-bash -->
 
-	$ git rm <file>
+    $ git rm <file>
 
 ¿Cómo renombrar archivos?
 -------------------------
 
 <!-- language: lang-bash -->
 
-	$ git mv <file> <new_file>
+    $ git mv <file> <new_file>
 
 ¿Cómo crear una rama (Branch)?
 ------------------------------
 
 <!-- language: lang-bash -->
 
-	$ git branch <branch>
+    $ git branch <branch>
 
 ¿Cómo moverse a otra rama (Branch)?
 -----------------------------------
 
 <!-- language: lang-bash -->
 
-	$ git checkout <branch>
+    $ git checkout <branch>
 
 ¿Cómo mezclar ramas (Merge)?
 ----------------------------
 
 <!-- language: lang-bash -->
 
-	$ git checkout master
-	$ git merge <branch>
+    $ git checkout master
+    $ git merge <branch>
 
