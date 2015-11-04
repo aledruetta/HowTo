@@ -8,8 +8,8 @@ Git / GitHub How To
 
 <!-- language: lang-bash -->
 
-	$ mkdir <directorio>
-	$ cd <directorio>
+	$ mkdir <directory>
+	$ cd <directory>
 
 - Inicializar el repositorio:
 
@@ -50,8 +50,8 @@ Git / GitHub How To
 
 <!-- language: lang-bash -->
 
-	$ git clone git://github.com/usuario/myCarpeta.git myCarpeta
-	$ cd myCarpeta
+	$ git clone git://github.com/user/repo.git folder
+	$ cd folder
 	$ ls -a
 	$ ls .git
 
@@ -62,19 +62,21 @@ Git / GitHub How To
 
 <!-- language: lang-bash -->
 
-	$ git remote add upstream git@github.com:GrupoEstudioC/EjerciciosLibroC.git
+	$ git remote add upstream git@github.com:user/repo.git
+        $ git remote -v
 
 - Para actualizar los cambios que se hayan producido en upstream.
 
 <!-- language: lang-bash -->
 
-	$ git pull --rebase upstream master
+        $ git fetch upstream
+	$ git rebase upstream/master
 
 ¿Cómo ver el estado en que se encuentra el repositorio?
 -------------------------------------------------------
 
 > El flujo de trabajo es el siguiente:
-> Agregar (Track), Modificar, Preparar (Stage), Confirmar (Commit).
+> Agregar (Track), Modificar (Edit), Preparar (Stage), Confirmar (Commit).
 
 <!-- language: lang-bash -->
 
@@ -83,29 +85,6 @@ Git / GitHub How To
 > La instrucción status le indicará si ha habido cambios en el Directorio
 > de Trabajo; si hay archivos sin seguimiento (untracked) o si hay cambios
 > preparados (staged) para un commit.
-
-¿Cómo Indicar a Git que debe dar seguimiento a archivos?
---------------------------------------------------------
-
-> Git versionará sólo aquellos archivos que le sean indicados para eso.
-
-- Todos los archivos:
-
-<!-- language: lang-bash -->
-
-	$ git add .
-
-- Archivos específicos:
-
-<!-- language: lang-bash -->
-
-	$ git add <nombre_archivo>
-
-- Tipos de archivos:
-
-<!-- language: lang-bash -->
-
-	$ git add *.py
 
 ¿Cómo preparar archivos (Stage)?
 --------------------------------
@@ -144,7 +123,7 @@ Git / GitHub How To
 
 <!-- language: lang-bash -->
 
-	$ git reset HEAD -- <archivo>
+	$ git reset HEAD -- <file>
 
 ¿Cómo deshacer cambios en el Directorio de Trabajo (unestaged)?
 ---------------------------------------------------------------
@@ -154,7 +133,7 @@ Git / GitHub How To
 
 <!-- language: lang-bash -->
 
-	$ git checkout -- <archivo>
+	$ git checkout -- <file>
 
 ¿Cómo confirmar archivos (Commit)?
 ----------------------------------
@@ -259,28 +238,28 @@ Ejemplo:
 
 <!-- language: lang-bash -->
 
-	$ git rm <archivo>
+	$ git rm <file>
 
 ¿Cómo renombrar archivos?
 -------------------------
 
 <!-- language: lang-bash -->
 
-	$ git mv <archivo> <archivo_destino>
+	$ git mv <file> <new_file>
 
 ¿Cómo crear una rama (Branch)?
 ------------------------------
 
 <!-- language: lang-bash -->
 
-	$ git branch <nombre_rama>
+	$ git branch <branch>
 
 ¿Cómo moverse a otra rama (Branch)?
 -----------------------------------
 
 <!-- language: lang-bash -->
 
-	$ git checkout <nombre_rama>
+	$ git checkout <branch>
 
 ¿Cómo mezclar ramas (Merge)?
 ----------------------------
@@ -288,9 +267,5 @@ Ejemplo:
 <!-- language: lang-bash -->
 
 	$ git checkout master
-	$ git merge <nombre_rama>
-
-
-
-
+	$ git merge <branch>
 
