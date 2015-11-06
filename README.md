@@ -1,4 +1,4 @@
-How To Git / GitHub 
+How To Git / GitHub
 ===================
 
 ¿Cómo crear un repositorio local?
@@ -54,6 +54,25 @@ How To Git / GitHub
     $ cd <directory>
     $ ls -a
     $ ls .git
+
+¿Cómo vincular un repositorio local y otro remoto?
+--------------------------------------------------
+
+<!-- language: lang-bash -->
+
+    $ git remote add origin git://github.com/user/repo.git
+
+- Si nuestros datos son locales (están en la PC):
+
+<!-- language: lang-bash -->
+
+    $ git push -u origin master
+
+- Si nuestros datos son remotos (están en el servidor):
+
+<!-- language: lang-bash -->
+
+    $ git pull -u origin master
 
 ¿Cómo actualizar el repositorio local cuando su origen es un fork?
 ------------------------------------------------------------------
@@ -217,7 +236,7 @@ Ejemplo:
 
     $ git diff HEAD --stat
     HowTo.md | 43 ++++++++++++++++++++++++++-----------------
- 	1 file changed, 26 insertions(+), 17 deletions(-)
+    1 file changed, 26 insertions(+), 17 deletions(-)
 
 ¿Cómo deshacer el último Commit y volver al último Stage?
 ---------------------------------------------------------

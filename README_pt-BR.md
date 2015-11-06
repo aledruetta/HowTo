@@ -55,6 +55,25 @@ How To Git / GitHub
     $ ls -a
     $ ls .git
 
+¿Como vincular um repositório local e um outro remoto?
+------------------------------------------------------
+
+<!-- language: lang-bash -->
+
+    $ git remote add origin git://github.com/user/repo.git
+
+- Se os nossos dados são locais (estão no PC):
+
+<!-- language: lang-bash -->
+
+    $ git push -u origin master
+
+- Se os nossos dados são remotos (estão no servidor):
+
+<!-- language: lang-bash -->
+
+    $ git pull -u origin master
+
 ¿Como atualizar o repositório local cuando o seu origen é um fork?
 ------------------------------------------------------------------
 
