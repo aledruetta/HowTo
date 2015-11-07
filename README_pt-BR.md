@@ -72,7 +72,7 @@ How To Git / GitHub
 
 <!-- language: lang-bash -->
 
-    $ git pull -u origin master
+    $ git pull origin master
 
 ¿Como atualizar o repositório local cuando o seu origen é um fork?
 ------------------------------------------------------------------
