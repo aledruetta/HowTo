@@ -1,5 +1,5 @@
 # How To Git / GitHub (Português)
-===================
+=================================
 
 Como criar um repositório local?
 ---------------------------------
@@ -42,7 +42,7 @@ Como gerar as chaves SSH?
 Como pegar a chave SSH para vincular ao GitHub
 -----------------------------------------------
 <!-- language: lang-bash -->
-    
+
     $ cat ~/.ssh/id_rsa.pub
 
 Como clonar um repositório GitHub?
@@ -240,7 +240,7 @@ Exemplo:
 
     $ git diff HEAD --stat
     HowTo.md | 43 ++++++++++++++++++++++++++-----------------
- 	1 file changed, 26 insertions(+), 17 deletions(-)
+    1 file changed, 26 insertions(+), 17 deletions(-)
 
 Como desfazer o último Commit e voltar ao último Stage?
 --------------------------------------------------------
@@ -252,7 +252,7 @@ Como desfazer o último Commit e voltar ao último Stage?
     $ git reset --soft HEAD~
 
 Como voltar a um commit em particular e fazer que seja o último?
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------
 
 <!-- language: lang-bash -->
 
@@ -287,10 +287,30 @@ Como selecionar outro 'galho' (Branch)?
     $ git checkout <branch>
 
 Como mesclar 'branches'(galhos) (Merge)?
---------------------------------
+----------------------------------------
 
 <!-- language: lang-bash -->
 
     $ git checkout master
     $ git merge <branch>
 
+Como fusionar um grupo de commits num único commit?
+---------------------------------------------------
+
+> A veces, antes de un merge o un push, queremos reorganizar el historial
+> de nuestro repositorio. Para eso, ejecutamos un rebase interactivo y editamos
+> la lista de commits cambiando pick por squash a partir del segundo commit
+> de la lista:
+
+<!-- language: lang-bash -->
+
+    $ git rebase -i HEAD~4
+
+    pick 01d1124 Agregando licencia
+    squash 6340aaa Caperucita Roja se comió al Lobo
+    squash ebfd367 Jekyll se ha vuelto autoconciente
+    squash 30e0ccb Modificando etiquetas
+
+> Los commits de la lista aparecen ordenados de atrás para adelante, es decir,
+> el último es HEAD y el primero es HEAD~3. Nótese que HEAD~4 no aparece en la
+> lista.

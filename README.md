@@ -297,3 +297,24 @@ Ejemplo:
 
     $ git checkout master
     $ git merge <branch>
+
+¿Cómo fusionar un grupo de commits en un único commit?
+------------------------------------------------------
+
+> A veces, antes de un merge o un push, queremos reorganizar el historial
+> de nuestro repositorio. Para eso, ejecutamos un rebase interactivo y editamos
+> la lista de commits cambiando pick por squash a partir del segundo commit
+> de la lista:
+
+<!-- language: lang-bash -->
+
+    $ git rebase -i HEAD~4
+
+    pick 01d1124 Agregando licencia
+    squash 6340aaa Caperucita Roja se comió al Lobo
+    squash ebfd367 Jekyll se ha vuelto autoconciente
+    squash 30e0ccb Modificando etiquetas
+
+> Los commits de la lista aparecen ordenados de atrás para adelante, es decir,
+> el último es HEAD y el primero es HEAD~3. Nótese que HEAD~4 no aparece en la
+> lista.
