@@ -40,7 +40,7 @@
 
     $ ssh-keygen -t rsa -C "tu_email@ejemplo.com"
 
-¿Como pegar a chave SSH para vincular ao GitHub
+¿Cómo tomar la llave SSH para vincular a GitHub
 -----------------------------------------------
 
 <!-- language: lang-bash -->
