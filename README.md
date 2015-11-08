@@ -1,4 +1,5 @@
-How To Git / GitHub
+# How To Git / GitHub (Espanhol)
+## Clique para ver a Versão em [Português](https://github.com/aledruetta/HowTo/blob/master/README_pt-BR.md)
 ===================
 
 ¿Cómo crear un repositorio local?
@@ -38,6 +39,13 @@ How To Git / GitHub
 <!-- language: lang-bash -->
 
     $ ssh-keygen -t rsa -C "tu_email@ejemplo.com"
+
+¿Como pegar a chave SSH para vincular ao GitHub
+-----------------------------------------------
+
+<!-- language: lang-bash -->
+
+    $ cat ~/.ssh/id_rsa.pub
 
 ¿Cómo clonar un repositorio de GitHub?
 --------------------------------------
@@ -289,4 +297,3 @@ Ejemplo:
 
     $ git checkout master
     $ git merge <branch>
-

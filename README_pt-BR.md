@@ -1,7 +1,7 @@
-How To Git / GitHub 
+# How To Git / GitHub (Português)
 ===================
 
-¿Como criar um repositório local?
+Como criar um repositório local?
 ---------------------------------
 
 - criar uma pasta local:
@@ -24,7 +24,7 @@ How To Git / GitHub
     $ git config --global user.name “Nome Sobrenome”
     $ git config --global user.email “user@server.com”
 
-¿Como gerar as chaves SSH?
+Como gerar as chaves SSH?
 --------------------------
 
 - Comprovar se existe alguma chave no PC:
@@ -39,7 +39,13 @@ How To Git / GitHub
 
     $ ssh-keygen -t rsa -C "user@server.com"
 
-¿Como clonar um repositório GitHub?
+Como pegar a chave SSH para vincular ao GitHub
+-----------------------------------------------
+<!-- language: lang-bash -->
+    
+    $ cat ~/.ssh/id_rsa.pub
+
+Como clonar um repositório GitHub?
 -----------------------------------
 
 <!-- language: lang-bash -->
@@ -55,7 +61,7 @@ How To Git / GitHub
     $ ls -a
     $ ls .git
 
-¿Como vincular um repositório local e um outro remoto?
+Como vincular um repositório local e um outro remoto?
 ------------------------------------------------------
 
 <!-- language: lang-bash -->
@@ -74,7 +80,7 @@ How To Git / GitHub
 
     $ git pull origin master
 
-¿Como atualizar o repositório local cuando o seu origen é um fork?
+Como atualizar o repositório local quando o seu origin é um fork?
 ------------------------------------------------------------------
 
 - Configurar o upstream (uma vez só)
@@ -91,7 +97,7 @@ How To Git / GitHub
     $ git fetch upstream
     $ git rebase upstream/master
 
-¿Como visualizar o estado atual do repositório?
+Como visualizar o estado atual do repositório?
 -----------------------------------------------
 
 > o fluxo de trabalho é o seguinte:
@@ -103,11 +109,11 @@ How To Git / GitHub
 
     $ git status
 
-> O comando status vai dizer se tem havido mudanças no Diretório de
+> O comando status vai dizer se houve mudanças no Diretório de
 > Trabalho; se tem arquivos sem seguimento (untracked) ou se tem
 > modificações preparadas (staged) para um commit.
 
-¿Como preparar arquivos (Stage)?
+Como preparar arquivos (Stage)?
 --------------------------------
 
 > Só os arquivos preparados (staged) vão ser adicionados na próxima
@@ -131,10 +137,10 @@ How To Git / GitHub
 
     $ git add *.py
 
-¿Como remover arquivos preparados (staged) por erro?
+Como remover arquivos preparados (staged) por erro?
 ----------------------------------------------------
 
-> Pode que tenha adicionado arquivos ao Stage que não queria ter preparado.
+> Pode ser que tenha adicionado arquivos ao Stage que não queria ter preparado.
 
 <!-- language: lang-bash -->
 
@@ -146,7 +152,7 @@ How To Git / GitHub
 
     $ git reset HEAD -- <file>
 
-¿Como desfazer mudanças no Diretório de Trabalho não preparadas (unestaged)?
+Como desfazer mudanças não preparadas no Diretório de Trabalho (unestaged)?
 ----------------------------------------------------------------------------
 
 > Se ainda não tem preparado as mudanças, pode desfazê-las e deixar o
@@ -156,10 +162,10 @@ How To Git / GitHub
 
     $ git checkout -- <file>
 
-¿Como confirmar arquivos (Commit)?
+Como confirmar arquivos (Commit)?
 ----------------------------------
 
-> Cuando estiver pronto, salve uma instantánea do seu trabalho.
+> Quando estiver pronto, salve o seu trabalho.
 
 <!-- language: lang-bash -->
 
@@ -171,20 +177,20 @@ How To Git / GitHub
 
     $ git commit -a -m "mensagem de confirmação"
 
-¿Como visualizar o historial de commits?
+Como visualizar o histórico de commits?
 ----------------------------------------
 
 <!-- language: lang-bash -->
 
     $ git log
 
-- um log con informação resumida:
+- um log com informação resumida:
 
 <!-- language: lang-bash -->
 
     $ git log --oneline
 
-¿Como visualizar as mudanças que se tem realizado?
+Como visualizar as mudanças que se tem realizado?
 --------------------------------------------------
 
 - Para visualizar as mudanças realizadas desde que preparamos (add) e confirmamos (commit) pela última vez:
@@ -196,38 +202,36 @@ How To Git / GitHub
 - Para visualizar as mudanças realizadas desde um commit em particular:
 
 > a ordem retrocedendo é: HEAD, HEAD~1, HEAD~2 ...
-> HEAD~n pode ser reemplazado también pelo identificador SHA1 do commit.
+> HEAD~n pode ser ssubstituído também pelo identificador SHA1 do commit.
 
 <!-- language: lang-bash -->
 
     $ git diff HEAD~3
 
-- Para visualizar os cambios entre dos commits:
+- Para visualizar as mudanças entre os commits:
 
 <!-- language: lang-bash -->
 
     $ git diff HEAD~3 HEAD~1
 
-- Para visualizar os cambios realizados que ainda não temos preparado (unstaged).
+> As vezes necesitamos saber o que tem mudado desde o último 'git add' que realizamos.
 
-> As vezes necesitamos saber o que tem mudado desde o último add que realizamos.
-
-- Para visualizar os cambios realizados que ainda não temos preparado (unstaged):
+- Para visualizar as mudanças realizadas que ainda não temos preparado (unstaged):
 
 <!-- language: lang-bash -->
 
     $ git diff
 
-> Antes de de se fazer um commit pode ser útil saber que mudanças estaremos
+> Antes de se fazer um commit pode ser útil saber que mudanças estaremos
 > confirmando.
 
-- Para visualizar as mudanças que já temos preparado (staged):
+- Para visualizar as mudanças que já temos preparadas (staged):
 
 <!-- language: lang-bash -->
 
     $ git diff --cached
 
-- Para visualizar um resumo das mudanças realizadas adicionar a opção
+- Para visualizar um resumo das mudanças realizadas temos que adicionar a opção
   --stat às instruções anteriores:
 
 Exemplo:
@@ -238,7 +242,7 @@ Exemplo:
     HowTo.md | 43 ++++++++++++++++++++++++++-----------------
  	1 file changed, 26 insertions(+), 17 deletions(-)
 
-¿Como desfazer o último Commit e voltar ao último Stage?
+Como desfazer o último Commit e voltar ao último Stage?
 --------------------------------------------------------
 
 > Se esquecemos adicionar arquivos o fazer alguma mudança antes de confirmar:
@@ -247,42 +251,42 @@ Exemplo:
 
     $ git reset --soft HEAD~
 
-¿Como voltar a um commit em particular e fazer que seja o último, apagando todos os que lhe siguen?
+Como voltar a um commit em particular e fazer que seja o último?
 ----------------------------------------------------------------------------------------------------
 
 <!-- language: lang-bash -->
 
     $ git reset --hard SHA1
 
-¿Como eliminar arquivos?
+Como remover arquivos?
 ------------------------
 
 <!-- language: lang-bash -->
 
     $ git rm <file>
 
-¿Como renomear arquivos?
+Como renomear arquivos?
 ------------------------
 
 <!-- language: lang-bash -->
 
     $ git mv <file> <new_file>
 
-¿Como criar um 'galho' (Branch)?
+Como criar um 'galho' (Branch)?
 --------------------------------
 
 <!-- language: lang-bash -->
 
     $ git branch <branch>
 
-¿Como moverse a otra 'galho' (Branch)?
+Como selecionar outro 'galho' (Branch)?
 --------------------------------------
 
 <!-- language: lang-bash -->
 
     $ git checkout <branch>
 
-¿Como misturar 'galhos' (Merge)?
+Como mesclar 'branches'(galhos) (Merge)?
 --------------------------------
 
 <!-- language: lang-bash -->
