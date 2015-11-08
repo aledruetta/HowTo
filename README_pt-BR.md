@@ -1,4 +1,4 @@
-How To Git / GitHub (Português)
+# How To Git / GitHub (Português)
 ===================
 
 Como criar um repositório local?

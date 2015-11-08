@@ -1,5 +1,5 @@
-How To Git / GitHub (Espanhol)
-## Versão em [Português](https://github.com/aledruetta/HowTo/blob/master/README_pt-BR.md)
+# How To Git / GitHub (Espanhol)
+## Clique para ver a Versão em [Português](https://github.com/aledruetta/HowTo/blob/master/README_pt-BR.md)
 ===================
 
 ¿Cómo crear un repositorio local?
