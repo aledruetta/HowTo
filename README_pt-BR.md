@@ -297,20 +297,19 @@ Como mesclar 'branches'(galhos) (Merge)?
 Como fusionar um grupo de commits num único commit?
 ---------------------------------------------------
 
-> A veces, antes de un merge o un push, queremos reorganizar el historial
-> de nuestro repositorio. Para eso, ejecutamos un rebase interactivo y editamos
-> la lista de commits cambiando pick por squash a partir del segundo commit
-> de la lista:
+> As vezes, antes de um merge ou de um push, queremos reorganizar o histórico
+> do nosso repositório. Para isso, executamos um rebase iterativo e editamos
+> a lista de commits mudando 'pick' por 'squash' após o segundo commit da
+> lista:
 
 <!-- language: lang-bash -->
 
     $ git rebase -i HEAD~4
 
-    pick 01d1124 Agregando licencia
-    squash 6340aaa Caperucita Roja se comió al Lobo
-    squash ebfd367 Jekyll se ha vuelto autoconciente
-    squash 30e0ccb Modificando etiquetas
+    pick 01d1124 Adicionando licencia
+    squash 6340aaa Chapeucinho Vermelho comeu o Lobo
+    squash ebfd367 Jekyll se tornou autoconciente
+    squash 30e0ccb Mudando etiquetas
 
-> Los commits de la lista aparecen ordenados de atrás para adelante, es decir,
-> el último es HEAD y el primero es HEAD~3. Nótese que HEAD~4 no aparece en la
-> lista.
+> Os commits da lista aparecem ordenados de trás pra fente, é dizer, o último
+> é HEAD e o primeiro é HEAD~3. Perceba-se que HEAD~4 não aparece na lista.
