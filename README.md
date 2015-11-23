@@ -154,7 +154,17 @@
 
     $ git reset HEAD -- <file>
 
-¿Cómo deshacer cambios en el Directorio de Trabajo (unestaged)?
+¿Cómo quitar archivos sin seguimiento (untracked) agregados erróneamente?
+-----------------------------------------------------------------------
+
+> Puede que haya adicionado archivos al directorio de trabajo y quiera
+> retirarlos. Si todavía no fueron adicionados para su seguimiento (untracked):
+
+<!-- language: lang-bash -->
+
+    $ git clean -f
+
+¿Cómo deshacer cambios en el Directorio de Trabajo (unestage)?
 ---------------------------------------------------------------
 
 > Si todavía no preparó los cambios, puede deshacerlos y dejar el Directorio
