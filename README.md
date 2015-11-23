@@ -192,6 +192,26 @@
 
     $ git log --oneline
 
+- Otras opciones:
+
+<!-- language: lang-bash -->
+
+    # Commits por autor con email
+    $ git shortlog -e
+
+    # Últimos n commits
+    $ git log -3
+
+    # A partir de... (day, week, month, year)
+    $ git log --since=5.month
+    $ git log --until=2.week
+
+    # Contiene un determinado patrón
+    $ git log --grep="Merge"
+
+    # Combinando
+    $ git log -5 --oneline --since=10.day --until=4.day --grep="fix"
+
 ¿Cómo ver los cambios que se han realizado?
 -------------------------------------------
 
