@@ -82,6 +82,24 @@
 
     $ git pull origin master
 
+¿Cómo cambiar el origen remoto de un repositorio local?
+-------------------------------------------------------
+
+> Si, por ejemplo, renombramos nuestro repositorio en GitHub, vamos a tener
+> que actualizar la url del origen remoto en nuestro repositorio local:
+
+- Para ver el origen remoto actual:
+
+<!-- language: lang-bash -->
+
+    $ git remote -v
+
+- Para actualizar la url:
+
+<!-- language: lang-bash -->
+
+    $ git remote set-url origin new_url
+
 ¿Cómo actualizar el repositorio local cuando su origen es un fork?
 ------------------------------------------------------------------
 
