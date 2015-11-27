@@ -324,6 +324,25 @@ Ejemplo:
 
     $ git mv <file> <new_file>
 
+¿Cómo etiquetar (tag) un commit?
+--------------------------------
+
+<!-- language: lang-bash -->
+
+    $ git tag <tag_name>
+
+- Listar las tags del repositorio:
+
+<!-- language: lang-bash -->
+
+    $ git tag
+
+- Mostrar un commit etiquetado:
+
+<!-- language: lang-bash -->
+
+    $ git show <tag_name>
+
 ¿Cómo crear una rama (Branch)?
 ------------------------------
 
