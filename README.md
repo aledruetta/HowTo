@@ -251,6 +251,12 @@ $ git log -5 --oneline --since=10.day --until=4.day --grep="fix"
 ¿Cómo ver los cambios que se han realizado?
 -------------------------------------------
 
+- Para ver los cambios entre el repositorio local y el remoto:
+
+```bash
+$ git diff master origin/master
+```
+
 - Para ver los cambios realizados desde que preparamos (add) y confirmamos (commit) por última vez:
 
 ```bash
