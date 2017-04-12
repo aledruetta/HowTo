@@ -192,6 +192,14 @@ $ git clean -f
 $ git checkout -- <file>
 ```
 
+¿Cómo mantener un archivo en el repositório pero ignorar futuras modificaciones?
+--------------------------------------------------------------------------------
+
+```bash
+$ git update-index --assume-unchanged <file>
+$ git update-index --no-assume-unchanged <file>         // revertir
+```
+
 ¿Cómo confirmar archivos (Commit)?
 ----------------------------------
 
